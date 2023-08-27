@@ -7,4 +7,4 @@
 
 tc = float(input('Write temperture in Celsius:  '))
 tf = tc * 1.8 + 32 
-print(f'Tempeture in Fahrenheit is: ', tf)
+print('Tempeture in Fahrenheit is: ', tf)
