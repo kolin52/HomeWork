@@ -5,6 +5,7 @@
 #60°C is 140 in Fahrenheit
 #45°F is 7 in Celsius
 
-tc = float(input('Write temperture in Celsius:  '))
-tf = tc * 1.8 + 32 
+t = float(input('Write temperture in Celsius:  '))
+
+tf = t * 1.8 + 32
 print('Tempeture in Fahrenheit is: ', tf)
