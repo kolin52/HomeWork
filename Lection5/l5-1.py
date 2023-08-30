@@ -6,4 +6,17 @@
  #по-голямо от 2-то число.
 #Използвайте проверка на логическо условие - оператор if.
 
-num = int(input())
+try:
+    num = input('Write number between 1000 and 9999: ')
+    num1 = num[0] + num[3]
+    num2 = num[1] + num[2]
+    if num1 < num2:
+        print(num1, 'is less than', num2)
+    elif num1 > num2:
+         print(num2, 'is bigger than', num1)
+    else:
+         print(num1, 'is equal to', num2)
+    
+
+except:
+     print('Write correct number')
