@@ -22,6 +22,6 @@ for i in range(1,50):
                 for g in range(1,50):
                         c = g**3
                         if a + b == c:
-                                print(i**2, '+', j**2, '=', g**3)
+                                print(f"{i}^2 + {j}^2 = {g}^3")
         
            
