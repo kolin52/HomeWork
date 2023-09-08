@@ -2,22 +2,19 @@
 #Редицата на Фибуначи е: 0, 1, 1, 2, 3, 5, 8, 13, 21, … Всяко следващо число е сумата от
 #предходните две.
 
-numbers = int(input ("How many times? "))  
-      
-    # First two terms  
-f_1 = 0  
-f_2 = 1  
-count = 0  
-       
+ 
+     
+x=0
+y=1
+while x <= 50:
+    print(x)
+    z = y
+    y = x
+    x = z + y
+    
 
-print ("The fibonacci sequence of the numbers is:")  
-while count < numbers:  
-            print(f_1)  
-            f_3 = f_1 + f_2  
-           
-            f_1 = f_2  
-            f_2 = f_3  
-            count += 1  
+
+
 
 #SECOND DECISION
 n = int(input ("Enter the number you want to print: "))     
