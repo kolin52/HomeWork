@@ -14,11 +14,8 @@
 
 
 for i in range(1,11):
-    for j in range(1,11):
-        if j == 11:
-            print(0)
-        print(j,end="",)
-        
-            
+    for j in range(i,i+10):
+        print(j%10,end=" ")
         
     print()
+
