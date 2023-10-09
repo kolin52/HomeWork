@@ -50,11 +50,10 @@ while True:
                                     balance2 = balance[name] + deposit_sum
                                     print('Your current balance is: ', balance2 )                                    
                                     break
-                        
                         else:
                                     print('Wrong choice. Try again. Thank you for banking with us!')
                                     break                            
-                                    
+                                   
             except:
                         print('Wrong option. Try again')
                         
