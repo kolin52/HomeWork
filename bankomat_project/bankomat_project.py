@@ -23,7 +23,7 @@ while i < 4:
                         break
             else:
                         print('Wrong pin')
-                        print('Your card is bloced')
+                        print('Your card is blocked')
                         quit()
                         
 print('Login Successful')
