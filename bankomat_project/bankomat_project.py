@@ -32,7 +32,6 @@ print('1  Balance Inquiry')
 print('2  Withdraw')
 print('3  Deposit')
 
-
 while True:
             
             try:
@@ -54,8 +53,7 @@ while True:
                         
                         else:
                                     print('Wrong choice. Try again. Thank you for banking with us!')
-                                    break
-                                    
+                                    break                            
                                     
             except:
                         print('Wrong option. Try again')
