@@ -27,7 +27,7 @@ while i < 4:
                         quit()
                         
 print('Login Successful')
-print("Make a choice - 1 to 3 or exit")
+print("Make a choice - 1 to 3")
 print('1  Balance Inquiry')
 print('2  Withdraw')
 print('3  Deposit')
