@@ -41,9 +41,7 @@ for i in range(3):
                                                 
                                                 else:
                                                             print('Wrong choice. Try again. Thank you for banking with us!')
-                                                            break
-                                                            
-                                                            
+                                                            break                 
                                     except:
                                                 print('Wrong option. Try again')  
                                                 break                        
