@@ -1,0 +1,46 @@
+#In order to use data I created csv file users.csv
+#First will create class for checking name and pin
+import csv
+class Check_data_users:
+        
+        def check_name():
+                user=open('/home/ka/users1.csv', 'r')
+                data = user.read()             
+                name = input('Enter your name: ')
+                if name in data:
+                        print('Your name is accepted')
+                else:
+                        print('Wrong name')
+        
+        
+        def check_pincode():   
+                        for i in range(3):
+                                
+                                user=open('/home/ka/users1.csv', 'r')
+                                data = user.read()             
+                                pincode = input('Enter your pincode: ')
+                                if pincode not in data:
+                                        print('Wrong pin code.')
+                                        i += 1
+                                elif pincode in data:
+                                        print('Login Successful')
+                                        
+                                
+                                else:
+                                        print('Pin code not accepted')
+                                        quit()
+
+        check_name()
+        check_pincode()
+
+class Menu_atm:                    
+                                                
+        def menu():
+                print("Make a choice - 1 to 3 or exit")
+                print('1  Balance Inquiry')
+                print('2  Withdraw')
+                print('3  Deposit')
+
+        
+        menu() 
+                                                
