@@ -1,46 +1,74 @@
 #In order to use data I created csv file users.csv
 #First will create class for checking name and pin
 import csv
-class Check_data_users:
+class Bankomat:
+
+        def menu():
+                print("Make a choice - 1 to 3 or exit")
+                print('1  Balance Inquiry')
+                print('2  Withdraw')
+                print('3  Deposit')
         
         def check_name():
-                user=open('/home/ka/users1.csv', 'r')
+                user=open('/home/ka/users.txt', 'r')
                 data = user.read()             
                 name = input('Enter your name: ')
                 if name in data:
                         print('Your name is accepted')
                 else:
                         print('Wrong name')
+                        quit()
         
-        
-        def check_pincode():   
+        def check_pincode():
                         for i in range(3):
-                                
-                                user=open('/home/ka/users1.csv', 'r')
-                                data = user.read()             
+                                pin=open('/home/ka/users.txt', 'r')
+                                code = pin.read()         
                                 pincode = input('Enter your pincode: ')
-                                if pincode not in data:
-                                        print('Wrong pin code.')
+                                if pincode != code:
+                                        print('Wrong pin code. Try again')
                                         i += 1
-                                elif pincode in data:
-                                        print('Login Successful')
-                                        
-                                
-                                else:
-                                        print('Pin code not accepted')
                                         quit()
+                                if pincode in code:
+                                        print('Login Successful')
+                                while True:       
+                                        try:
+                                                choice = int(input('Enter your choice:'))
+                                              
+                                                if choice == 1:
+                                                        print('Your balance is: ', )
+                                                        break
+                                                elif choice == 2:
+                                                        withdraw_sum = int(input('Please write withdraw sum: '))
+                                                        balance1 = balance - withdraw_sum
+                                                        print('Your current balance is: ', balance1 )
+                                                        break
+                                                elif choice == 3:
+                                                                deposit_sum = int(input('Please write deposit_sum: '))
+                                                                balance2 = balance + deposit_sum
+                                                                print('Your current balance is: ', balance2 )                                    
+                                                                break
+                                                
+                                                else:
+                                                                print('Wrong choice. Try again. Thank you for banking with us!')
+                                                                break                 
+                                        except:
+                                                print('Wrong option. Try again')  
+                                                break
+
+                                
+                                
+                                
+
+                                    
+        
+            
 
         check_name()
         check_pincode()
+        menu()
 
-class Menu_atm:                    
-                                                
-        def menu():
-                print("Make a choice - 1 to 3 or exit")
-                print('1  Balance Inquiry')
-                print('2  Withdraw')
-                print('3  Deposit')
 
-        
-        menu() 
+
+
+
                                                 
