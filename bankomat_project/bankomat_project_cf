@@ -1,5 +1,4 @@
-#In order to use data I created csv file users.csv
-#First will create class for checking name and pin
+
 import csv
 class Bankomat:
 
