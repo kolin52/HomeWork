@@ -1,12 +1,6 @@
 
 import csv
 class Bankomat:
-
-        def menu():
-                print("Make a choice - 1 to 3 or exit")
-                print('1  Balance Inquiry')
-                print('2  Withdraw')
-                print('3  Deposit')
         
         def check_name_pin():
                 data = {'Kalin': 123, 'Ivan': 456 }
@@ -27,35 +21,35 @@ class Bankomat:
                                         break
                                 if pin == data[name]:
                                         print('Login Successful')
-                                while True:       
-                                        try:
-                                                choice = int(input('Enter your choice:'))
-                                              
-                                                if choice == 1:
-                                                        print('Your balance is: ',balance[name] )
-                                                        break
-                                                elif choice == 2:
+                                        print('Make a choice - 1 to 3 or exit\n 1  Balance Inquiry\n 2  Withdraw\n 3  Deposit')
+                                
+                                        choice = int(input('Enter your choice:'))
+        
+                                        if choice == 1:
+                                                print('Your balance is: ',balance[name] )
+                                                break
+                                        elif choice == 2:
                                                         withdraw_sum = int(input('Please write withdraw sum: '))
                                                         balance1 = balance[name] - withdraw_sum
                                                         print('Your current balance is: ', balance1 )
                                                         break
-                                                elif choice == 3:
+                                        elif choice == 3:
                                                                 deposit_sum = int(input('Please write deposit_sum: '))
                                                                 balance2 = balance[name] + deposit_sum
                                                                 print('Your current balance is: ', balance2 )                                    
                                                                 break
                                                 
-                                                else:
+                                        else:
                                                                 print('Wrong choice. Try again. Thank you for banking with us!')
                                                                 break                 
-                                        except:
-                                                print('Wrong option. Try again')  
-                                                break
+                               
+                                        print('Wrong option. Try again')  
+                                        break
                                 break
             
 
         check_name_pin()
-        menu()
+        
 
 
 
