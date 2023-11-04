@@ -54,13 +54,6 @@ class Bankomat:
                                         except:
                                                 print('Wrong option. Try again')  
                                                 break
-
-                                
-                                
-                                
-
-                                    
-        
             
 
         check_name()
