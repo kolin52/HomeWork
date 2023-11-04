@@ -8,42 +8,40 @@ class Bankomat:
                 print('2  Withdraw')
                 print('3  Deposit')
         
-        def check_name():
-                user=open('/home/ka/users.csv', 'r')
-                data = user.read()             
+        def check_name_pin():
+                data = {'Kalin': 123, 'Ivan': 456 }
+                balance = {'Kalin': 500, 'Ivan': 4500 }
+     
                 name = input('Enter your name: ')
-                if name in data:
+                if name in data.keys():
                         print('Your name is accepted')
                 else:
                         print('Wrong name')
                         quit()
-        
-        def check_pincode():
-                        for i in range(3):
-                                pincode=open('/home/ka/users.csv', 'r')
-                                pincode = pincode.read()         
-                                pin = input('Enter your pincode: ')
-                                if pin != pincode:
+
+                for i in range(3):       
+                                pin = int(input('Enter your pincode: '))
+                                if pin != data[name]:
                                         print('Wrong pin code. Try again')
                                         i += 1
-                                        quit()
-                                if pin == pincode:
+                                        break
+                                if pin == data[name]:
                                         print('Login Successful')
                                 while True:       
                                         try:
                                                 choice = int(input('Enter your choice:'))
                                               
                                                 if choice == 1:
-                                                        print('Your balance is: ', )
+                                                        print('Your balance is: ',balance[name] )
                                                         break
                                                 elif choice == 2:
                                                         withdraw_sum = int(input('Please write withdraw sum: '))
-                                                        balance1 = balance - withdraw_sum
+                                                        balance1 = balance[name] - withdraw_sum
                                                         print('Your current balance is: ', balance1 )
                                                         break
                                                 elif choice == 3:
                                                                 deposit_sum = int(input('Please write deposit_sum: '))
-                                                                balance2 = balance + deposit_sum
+                                                                balance2 = balance[name] + deposit_sum
                                                                 print('Your current balance is: ', balance2 )                                    
                                                                 break
                                                 
@@ -53,10 +51,10 @@ class Bankomat:
                                         except:
                                                 print('Wrong option. Try again')  
                                                 break
+                                break
             
 
-        check_name()
-        check_pincode()
+        check_name_pin()
         menu()
 
 
