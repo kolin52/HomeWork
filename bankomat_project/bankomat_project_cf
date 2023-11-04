@@ -9,7 +9,7 @@ class Bankomat:
                 print('3  Deposit')
         
         def check_name():
-                user=open('/home/ka/users.txt', 'r')
+                user=open('/home/ka/users.csv', 'r')
                 data = user.read()             
                 name = input('Enter your name: ')
                 if name in data:
@@ -20,7 +20,7 @@ class Bankomat:
         
         def check_pincode():
                         for i in range(3):
-                                pincode=open('/home/ka/users.txt', 'r')
+                                pincode=open('/home/ka/users.csv', 'r')
                                 pincode = pincode.read()         
                                 pin = input('Enter your pincode: ')
                                 if pin != pincode:
