@@ -1,4 +1,3 @@
-
 data = {'Kalin': 123, 'Ivan': 456 }
 balance = {'Kalin': 500, 'Ivan': 4500 }
 
@@ -12,9 +11,10 @@ else:
             quit()
 
 for i in range(3):
-            pin_input = int(input('Enter your pin: '))
-            pin1 = int(data[name])
-            if pin1 == pin_input:
+            try:
+                pin_input = int(input('Enter your 3 digits pin: ')) 
+                pin1 = int(data[name])
+                if pin1 == pin_input:
                         print('Login Successful')
                         print("Make a choice - 1 to 3 or exit")
                         print('1  Balance Inquiry')
@@ -46,12 +46,25 @@ for i in range(3):
                                                 print('Wrong option. Try again')  
                                                 break                        
                         break
-            elif pin_input != pin1:
-                        print('Wrong pin code.')
-                        i += 1
+             
+
+                elif pin_input != pin1:
+                    print('Wrong pin code.')
+                    i += 1
                         
-            else:
-                        print('Pin code not accepted')
-                        quit()
+                else:
+                    print('Pin code not accepted')
+                    quit()
+
+            except:
+                    print('Pin code not accepted')
+                    quit()     
+
+                        
+
+
+                    
+                        
+                      
 
                         
