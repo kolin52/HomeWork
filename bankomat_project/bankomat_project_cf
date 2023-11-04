@@ -21,14 +21,14 @@ class Bankomat:
         
         def check_pincode():
                         for i in range(3):
-                                pin=open('/home/ka/users.txt', 'r')
-                                code = pin.read()         
-                                pincode = input('Enter your pincode: ')
-                                if pincode != code:
+                                pincode=open('/home/ka/users.txt', 'r')
+                                pincode = pincode.read()         
+                                pin = input('Enter your pincode: ')
+                                if pin != pincode:
                                         print('Wrong pin code. Try again')
                                         i += 1
                                         quit()
-                                if pincode in code:
+                                if pin == pincode:
                                         print('Login Successful')
                                 while True:       
                                         try:
