@@ -1,5 +1,3 @@
-
-import csv
 class Bankomat:
         
         def check_name_pin():
@@ -13,7 +11,7 @@ class Bankomat:
                                 print('Your name is accepted')
                         else:
                                 print('Wrong name')
-                        quit()
+                                quit()
 
                         for i in range(3):       
                                         pin = int(input('Enter your pincode: '))                                     
@@ -43,17 +41,19 @@ class Bankomat:
                                
                                                                 print('Wrong option. Try again')  
                                                                 break
-                                        break
+                                        elif pin != data[name]:
+                                                                print('Wrong pin code.')
+                                                                i += 1  
+                                        else:
+                                                
+                                            print('Pin code not accepted')
+                                            quit()
+     
+                                        
+                        
                 except:
                         print('Wrong input')
                         quit()
             
 
         check_name_pin()
-        
-
-
-
-
-
-                                                
