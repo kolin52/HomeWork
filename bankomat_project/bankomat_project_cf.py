@@ -2,7 +2,7 @@ import csv
 import pandas as pd
 #create class in order to check correct user's name and pin
 class Check_user_pin():
-
+#Function to check correct name
     def check_name():
         name = input('Write your name: ')
         users = pd.read_csv('/home/ka/users.csv')
@@ -10,8 +10,7 @@ class Check_user_pin():
         if name in a:
             print('Your name is accepted')
 
-   
-
+#Function to check correct pincode   
     def check_pin():
             try:
                 for i in range(3):
