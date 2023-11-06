@@ -9,9 +9,7 @@ class Check_user_pin():
         a = users.loc[:, 'user']
         if name in a:
             print('Your name is accepted')
-
-   
-
+            
     def check_pin():
             try:
                 for i in range(3):
