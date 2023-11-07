@@ -9,8 +9,7 @@ class Check_user_pin():
         a = users.loc[:, 'user']
         if name in a:
             print('Your name is accepted')
-
-#Function to check correct pincode   
+#Function to check correct pincode            
     def check_pin():
             try:
                 for i in range(3):
@@ -53,10 +52,7 @@ class Check_user_pin():
                                         else:
                                                 
                                             print('Pin code not accepted')
-                                            quit()
-     
-                                        
-                        
+                                            quit()           
             except:
                         print('Wrong input')
                         quit()
