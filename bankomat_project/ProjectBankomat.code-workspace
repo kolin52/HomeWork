@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../bankomat_project"
+		},
+		{
+			"name": "ProjectBankomat",
+			"path": "../../../ProjectBankomat/ProjectBankomat"
+		}
+	],
+	"settings": {
+		"editor.autoIndent": "brackets",
+		"editor.defaultFormatter": "KevinRose.vsc-python-indent",
+		"git.autoRepositoryDetection": "openEditors"
+	}
+}
