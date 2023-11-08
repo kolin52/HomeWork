@@ -1,7 +1,7 @@
 print(50 * '=')
 text = 'Welcome to our bank'
 print(text.center(50))
-print('In order to service you, please read a menu below')
+print('In order to service you, please read the menu below')
 print(50 * '=')
 
 import dic
